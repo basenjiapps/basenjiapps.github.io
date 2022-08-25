@@ -1,0 +1,85 @@
+---
+layout: default
+title: Main
+---
+
+<style>
+  .content-wrapper {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .main-container {
+    height: calc(100vh - 240px);
+    width: 100%;
+    /* text-align: center; */
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 64px;
+  }
+  
+  .subtitle {
+    font-weight: normal;
+    font-size: 32px;
+  }
+  
+  .store-logo {
+    margin-left: -24px;
+    width: 215px;
+  }
+  
+  .mt50 {
+    margin-top: 50px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .main-container {
+      height: calc(100vh - 270px);
+    }
+    
+    .content-wrapper {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    .title {
+      font-weight: bold;
+      font-size: 28px;
+    }
+    
+    .subtitle {
+      font-weight: normal;
+      font-size: 16px;
+    }
+    
+    .store-logo {
+      margin-left: -24px;
+      width: 180px;
+    }
+    
+    .mt50 {
+      margin-top: 25px;
+    }
+  }
+</style>
+<div class="main-container" style="display: flex; align-items: center;">
+  <div>
+    <h1 class="title">Hey, we are Basenji&nbsp;Apps.</h1>
+    <h4 class="subtitle">
+      We make mental health and wellbeing apps.<br/>
+      Contact us at <a href="mailto:support@basenjiapps.com">support@basenjiapps.com</a>.
+    </h4>
+    <div class="mt50">
+      <a href="https://apps.apple.com/developer/basenji-apps/id1466043953" target="_blank">
+        <img class="store-logo" src="/assets/images/app_store_logo.png" />
+      </a>
+      <a href="https://play.google.com/store/apps/dev?id=7066327292294031026" target="_blank">
+        <img class="store-logo" src="/assets/images/google_play_logo.png" />
+      </a>
+    </div>
+  </div>
+</div>
