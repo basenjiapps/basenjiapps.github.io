@@ -1,0 +1,24 @@
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include head.html -%}
+
+  <body>
+    <header class="header">
+      <a href="/">
+        <img width="62" src="/assets/images/bsnj.png" />
+      </a>
+    </header>
+    <div class="content-wrapper">
+      {{ content }}
+    </div>
+    <footer class="footer" style="position: relative;">
+      <div>
+        © 2023 Basenji Apps<br/>
+        <a href="https://www.flyerone.vc/" target="_blank">Backed by Flyer One Ventures</a>
+      </div>
+      <div>
+        <a style="margin-right: 15px;" href="https://basenjiapps.com/docs/privacy_policy">Privacy Policy</a>
+        <a href="https://basenjiapps.com/docs/terms_of_use">Terms of Use</a>
+      </div>
+    </footer>
+  </body>
+</html>
