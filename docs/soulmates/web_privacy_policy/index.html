@@ -1,0 +1,37 @@
+---
+layout: docs
+title: Privacy Policy
+---
+
+<div id="content"></div>
+
+<script>
+    function loadContentByTimeZone(timeZone) {
+
+        let contentDiv = document.getElementById('content');
+        let fileName = '';
+
+        if (timeZone.includes('Europe')) {
+            fileName = 'web_privacy_policy_europe.html';
+        } else if ((timeZone.includes('America'))) {
+            fileName = 'web_privacy_policy_usa.html';
+        } else {
+            fileName = 'web_privacy_policy_usa.html';
+        }
+
+        fetch(fileName)
+            .then(response => response.text())
+            .then(data => {
+                contentDiv.innerHTML = data;
+                document.getElementById("docs-footer-privacy").href = 'https://basenjiapps.com/docs/soulmates/web_privacy_policy';
+                document.getElementById("docs-footer-terms").href = 'https://basenjiapps.com/docs/soulmates/web_terms_of_use';
+            })
+            .catch(error => {
+                console.error('Error loading content:', error);
+                contentDiv.innerHTML = '<p>Error loading content.</p>';
+            });
+    }
+
+    let userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    loadContentByTimeZone(userTimeZone);
+</script>
